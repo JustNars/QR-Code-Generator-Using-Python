@@ -66,7 +66,6 @@ class MainApp(CTk):
     def type_file(self, i):
         self.type = i
 
-
     def show_qr_code_widgets(self):
         for children in self.main_frame.winfo_children():
             children.destroy()
@@ -85,8 +84,6 @@ class MainApp(CTk):
         self.show_code_button = CTkButton(self.main_frame, text="Show Code", command=self.show_code, fg_color="#575858",
                                           text_color="white", height=35, width=150, font=("Roboto", 20), hover_color="#3E3F3F", state=self.dict["onoff"])
         self.show_code_button.place(x=255, y=185)
-
-
 
     # this func checks if the user typed anything. if not then it will yell at the user
     def check(self):
@@ -135,8 +132,6 @@ class MainApp(CTk):
                     self.type = ".png"
 
         except Exception: self.show_widgets()
-
-
-
+            
 if __name__ == "__main__":
     MainApp().mainloop()
